@@ -48,7 +48,7 @@ services:
     ports:
       # Garanta que não haverá conflitos de porta com um mongodb que esteja
       # rodando localmente
-      - 5644:5644
+      - 5432:5432
   redis:
     image: redis
     expose: 
