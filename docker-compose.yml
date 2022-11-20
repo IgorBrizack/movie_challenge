@@ -28,6 +28,7 @@ services:
     depends_on:
       # Precisa do mongo funcionando antes de subir o node
       - db
+      - redis
     # Lista de portas mapeadas de dentro para fora do container
     # na notação porta_de_fora:porta_de_dentro
     ports:
@@ -48,6 +49,13 @@ services:
       # Garanta que não haverá conflitos de porta com um mongodb que esteja
       # rodando localmente
       - 5432:5432
+  redis:
+    image: redis
+    expose: 
+      - 6379
+    environment:
+      REDIS_PASSWORD: redispassword
+   
 
 # Lista de redes que os containeres irão utilizar
 networks:

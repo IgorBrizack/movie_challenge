@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { CacheModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -10,6 +10,7 @@ import 'dotenv/config';
 
 @Module({
   imports: [
+    CacheModule.register(),
     TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     MoviesModule,

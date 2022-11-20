@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import redis from 'src/lib/cache';
 import { UsersService } from '../users/users.service';
 
 @Injectable()
@@ -11,7 +12,6 @@ export class AuthService {
 
   async validateUser(userEmail: string, userPassword: string) {
     const user = await this.usersService.getByEmail(userEmail);
-    console.log(user);
     if (user && user.password === userPassword) {
       const { id, name, email } = user;
       return { id, name, email };
@@ -23,7 +23,7 @@ export class AuthService {
   async login(user: any) {
     const payload = { email: user.email, sub: user.id };
     return {
-      access_token: this.jwtService.sign(payload),
+      access_token: `Bearer ${this.jwtService.sign(payload)}`,
     };
   }
 }
