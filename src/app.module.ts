@@ -5,18 +5,12 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { MoviesModule } from './movies/movies.module';
 import { AuthModule } from './auth/auth.module';
+import { dataSourceOptions } from 'db/data-source';
 import 'dotenv/config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      database: 'postgres',
-      username: process.env.POSTGRES_USER,
-      password: process.env.POSTGRES_PASSWORD,
-      entities: ['dist/**/*.entity.js'],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     MoviesModule,
     AuthModule,
