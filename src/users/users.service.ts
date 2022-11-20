@@ -21,12 +21,6 @@ export class UsersService {
     return this.usersRepository.find();
   }
 
-  async findOne(LoginUserDto: LoginUserDto) {
-    const result = await this.usersRepository.findOneBy(LoginUserDto);
-
-    return result;
-  }
-
   async getByEmail(email: string) {
     return this.usersRepository.findOne({
       where: {
