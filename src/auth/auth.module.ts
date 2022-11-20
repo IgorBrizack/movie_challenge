@@ -13,7 +13,7 @@ import 'dotenv/config';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: process.env.JWT_SECRET,
+      secret: process.env.JWT_SECRET || 'MY_SECRET_JWT***1994-2022',
       signOptions: { expiresIn: '1200s' },
     }),
   ],

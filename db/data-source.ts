@@ -3,9 +3,10 @@ import 'dotenv/config';
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
-  database: 'postgres',
-  username: process.env.POSTGRES_USER,
-  password: process.env.POSTGRES_PASSWORD,
+  database: process.env.PGDATABASE || 'postgres',
+  username: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  port: Number(process.env.PORT) || 5432,
   entities: ['dist/**/*.entity.js'],
   migrations: ['dist/db/migrations/*.js'],
 };
