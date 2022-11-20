@@ -7,6 +7,7 @@ export const dataSourceOptions: DataSourceOptions = {
   username: process.env.PGUSER,
   password: process.env.PGPASSWORD,
   port: Number(process.env.PORT) || 5432,
+  host: process.env.PGHOST,
   entities: ['dist/**/*.entity.js'],
   migrations: ['dist/db/migrations/*.js'],
 };
