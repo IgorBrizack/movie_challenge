@@ -1,7 +1,7 @@
 
 # :movie_camera: Movie Challenge API
 
-Esse projeto é um desafio técnico proposto durante o processo de recrutamento de uma empresa de tecnológia. 
+Esse projeto foi um desafio técnico proposto durante o processo de recrutamento de uma empresa de tecnológia. 
 
 Desafios propostos: 
 - Desenvolver um sistema de autenticação JWT.
