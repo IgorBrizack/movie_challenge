@@ -6,12 +6,14 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Movies_challenge')
+    .setTitle('Movies_Challenge API')
     .setDescription(
-      'The Movies_challenge API, has a simple CRUD to the users interact with a table of movies',
+      'A API Movies_Challenge, faz parte de um desafio técnico de criação de um CRUD com integração do JWT para validação de usuários, navegação dentro das rotas propostas dentro desse CRUD',
     )
     .setVersion('1.0')
-    .addTag('challenge')
+    .addTag('users')
+    .addTag('movies')
+    .addTag('Login Authorization')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
