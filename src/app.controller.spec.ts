@@ -15,9 +15,9 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Seja bem vindo a API movie Challenge"', () => {
+    it('should return "Seja bem vindo a API movie Challenge!"', () => {
       expect(appController.getHello()).toBe(
-        'Seja bem vindo a API movie Challenge',
+        'Seja bem vindo a API movie Challenge!',
       );
     });
   });
