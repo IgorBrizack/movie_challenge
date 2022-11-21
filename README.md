@@ -28,9 +28,7 @@ Ferramentas necessárias:
   - Docker-compose
   - Deve ser setado as váriaveis de ambiente no .env da sua aplicação
  
- </details>
-
-Clone o repositório e rode na sua máquina:
+ Clone o repositório e rode na sua máquina:
 
 ```
 git clone git@github.com:IgorBrizack/movie_challenge.git
@@ -45,6 +43,10 @@ docker-compose up -d
 inicie a aplicação...
 npm run start:dev
 ```
+ 
+ </details>
+
+
 
 
 ### Acessando Documentação 
