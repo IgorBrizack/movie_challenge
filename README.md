@@ -6,6 +6,7 @@ Esse projeto é um desafio técnico proposto durante o processo de recrutamento 
 Desafios propostos: 
 - Desenvolver um sistema de autenticação JWT.
 - Desenvolver uma CRUD de um catálogo de filmes. Todos os endpoints dessa CRUD só devem ser consumidos por um usuário autenticado.
+- Desenvolver os testes da aplicação.
 - Fazer o Deploy ao finalizar a criação da API.
 
 Ferramentas necessárias:
@@ -40,12 +41,14 @@ npm run start:dev
 
 ### Acessando Documentação 
 <details>
- A Documentação da API pode ser encontrada de duas formas através dao endpoint do deploy.
+ A Documentação da API pode ser encontrada de duas formas através do endpoint do deploy.
  
  endpoint deploy: https://moviechallenger.up.railway.app/api
  
  ou 
  
  Após rodar na sua máquina acessando o http://localhost:3000/api
+ 
+ Nesse momento o Swagger irá renderizar com as chamadas das rotas e as sua definições.
  
 </details>
