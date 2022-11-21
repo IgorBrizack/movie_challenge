@@ -3,7 +3,7 @@ export class CreateMovieDto {
    * Deve ser inserido o nome do Filme
    * @example Harry Potter e a pedra filosofal
    */
-  moviename: string;
+  name: string;
 
   /**
    * Deve ser inserido o tema do Filme

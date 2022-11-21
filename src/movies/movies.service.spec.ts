@@ -7,13 +7,13 @@ import { MoviesService } from './movies.service';
 const allMovies: Movie[] = [
   new Movie({
     id: 1,
-    moviename: 'Harry Potter',
+    name: 'Harry Potter',
     theme: 'Aventura',
     year: new Date(),
   }),
   new Movie({
     id: 2,
-    moviename: 'Os suspeitos',
+    name: 'Os suspeitos',
     theme: 'Suspense',
     year: new Date(),
   }),
@@ -21,8 +21,8 @@ const allMovies: Movie[] = [
 
 const movie: Movie = new Movie({
   id: 1,
-  moviename: 'igor',
-  theme: 'igor@mail.com',
+  name: 'Os suspeitos',
+  theme: 'Suspense',
   year: new Date(),
 });
 

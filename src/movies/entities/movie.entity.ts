@@ -6,7 +6,7 @@ export class Movie {
   id: number;
 
   @Column()
-  moviename: string;
+  name: string;
 
   @Column()
   theme: string;
@@ -16,7 +16,7 @@ export class Movie {
 
   constructor(todo?: Partial<Movie>) {
     this.id = todo?.id;
-    this.moviename = todo?.moviename;
+    this.name = todo?.name;
     this.theme = todo?.theme;
     this.year = todo?.year;
   }
