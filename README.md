@@ -51,7 +51,7 @@ npm run start:dev
 
 ### Acessando Documentação 
 <details>
- A Documentação da API pode ser encontrada de duas formas através do endpoint do deploy.
+ A Documentação da API pode ser encontrada de duas formas, através do endpoint do deploy.
  
  endpoint deploy: https://moviechallenger.up.railway.app/api
  
