@@ -13,4 +13,11 @@ export class Movie {
 
   @Column()
   year: Date;
+
+  constructor(todo?: Partial<Movie>) {
+    this.id = todo?.id;
+    this.moviename = todo?.moviename;
+    this.theme = todo?.theme;
+    this.year = todo?.year;
+  }
 }
