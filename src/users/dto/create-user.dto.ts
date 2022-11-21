@@ -13,7 +13,7 @@ export class CreateUserDto {
 
   /**
    * Deve ser inserido o email do usuário
-   * @example Joao123apiPassword
+   * @example joao@mail.com
    */
   email: string;
 }

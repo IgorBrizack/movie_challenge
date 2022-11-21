@@ -6,6 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Movies_Challenge API')
     .setDescription(
       'A API Movies_Challenge, faz parte de um desafio técnico de criação de um CRUD com integração do JWT para validação de usuários, navegação dentro das rotas propostas dentro desse CRUD',

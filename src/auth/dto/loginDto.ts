@@ -1,13 +1,15 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class LoginDto {
-  /**
-   * Deve ser inserio o email do usuário
-   * @example joao@mail.com
-   */
+  @ApiProperty({
+    description: 'Deve ser passado um email',
+    example: 'joao@mail.com',
+  })
   email: string;
 
-  /**
-   * Deve ser inserido o password do usuário
-   * @example Joao123apiPassword
-   */
+  @ApiProperty({
+    description: 'Deve ser passado um password',
+    example: 'Joao123apiPassword',
+  })
   password: string;
 }
