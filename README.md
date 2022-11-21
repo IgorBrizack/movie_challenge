@@ -26,7 +26,7 @@ Ferramentas necessárias:
   - Node
   - Docker
   - Docker-compose
-  - Deve ser setado as váriaveis de ambiente no .env da sua aplicação
+  - Devem ser setadas as váriaveis de ambiente no .env da sua aplicação
  
  Clone o repositório e rode na sua máquina:
 
