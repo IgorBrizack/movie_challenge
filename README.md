@@ -1,73 +1,66 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# :movie_camera: Movie Challenge API
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Esse projeto foi um desafio técnico proposto durante o processo de recrutamento de uma empresa. 
 
-## Description
+Desafios propostos: 
+- Desenvolver um sistema de autenticação JWT.
+- Desenvolver uma CRUD de um catálogo de filmes. Todos os endpoints dessa CRUD só devem ser consumidos por um usuário autenticado.
+- Desenvolver os testes da aplicação.
+- Fazer o Deploy ao finalizar a criação da API e gerar a sua documentação com o Swagger.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Ferramentas necessárias:
+- TypeScript (Possuia conhecimento prévio)
+- Nest.js (Não possuia conhecimento prévio)
+- TypeORM (Possuia conhecimentos em ORM ex: Sequelize)
+- Swagger (Não possuia conhecimento prévio)
+- Docker (Possuia conhecimento Prévio)
+- Redis (Não consegui implementar, não possuia conhecimento prévio)
+- PostgreSQL (Possuia conhecimento prévio)
 
-## Installation
+<details>
+<summary><strong> ⚠️ Configurações mínimas para execução do projeto</strong></summary><br />
+ 
+ Na sua máquina deve ter:
+  - Sistema Operacional Distribuição Unix
+  - Node
+  - Docker
+  - Docker-compose
+  - Devem ser setadas as váriaveis de ambiente no .env da sua aplicação
+ 
+ Clone o repositório e rode na sua máquina:
 
-```bash
-$ npm install
 ```
+git clone git@github.com:IgorBrizack/movie_challenge.git
+acesse o diretório...
 
-## Running the app
+instale as dependências...
+npm install
 
-```bash
-# development
-$ npm run start
+subindo os containers...
+docker-compose up -d
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+inicie a aplicação...
+npm run start:dev
 ```
+ 
+ </details>
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+### Acessando Documentação 
+<details>
+ A Documentação da API pode ser encontrada de duas formas, através do endpoint do deploy.
+ 
+ endpoint deploy: https://moviechallenger.up.railway.app/api
+ 
+ ou 
+ 
+ Após rodar na sua máquina acessando o http://localhost:3000/api
+ 
+ Nesse momento o Swagger irá renderizar com as chamadas das rotas e as sua definições.
+ 
+ Atente-se as rotas que necessitam de um JWT para serem acessadas. O token só será retornado após a criação de um usuário e esse usuário ter feito o login.
+ 
+</details>
