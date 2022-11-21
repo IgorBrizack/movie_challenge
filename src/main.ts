@@ -9,7 +9,7 @@ async function bootstrap() {
     .addBearerAuth()
     .setTitle('Movies_Challenge API')
     .setDescription(
-      'A API Movies_Challenge, faz parte de um desafio técnico de criação de um CRUD com integração do JWT para validação de usuários, navegação dentro das rotas propostas dentro desse CRUD',
+      'A API Movies_Challenge, faz parte de um desafio técnico de criação de um CRUD com integração do JWT para validação de usuários e navegação dentro das rotas propostas dentro desse CRUD',
     )
     .setVersion('1.0')
     .addTag('users')
