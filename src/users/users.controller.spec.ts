@@ -21,7 +21,7 @@ const allUser: User[] = [
   }),
 ];
 
-const createdUser: User = new User({
+const user: User = new User({
   id: 1,
   name: 'igor',
   email: 'igor@mail.com',
@@ -40,9 +40,9 @@ describe('UsersController', () => {
           provide: UsersService,
           useValue: {
             findAll: jest.fn().mockResolvedValue(allUser),
-            create: jest.fn(),
-            update: jest.fn().mockResolvedValue(createdUser),
-            remove: jest.fn(),
+            create: jest.fn().mockResolvedValue(user),
+            update: jest.fn().mockResolvedValue(user),
+            remove: jest.fn().mockResolvedValue('1'),
           },
         },
       ],
@@ -52,46 +52,6 @@ describe('UsersController', () => {
     service = module.get<UsersService>(UsersService);
   });
 
-  // it('should be defined', () => {
-  //   expect(controller).toBeDefined();
-  // });
-
-  // it('Deve criar um usuário', () => {
-  //   expect(
-  //     controller.create({
-  //       name: 'Igor',
-  //       email: 'igormail@mail.com',
-  //       password: '12345',
-  //     }),
-  //   ).toEqual({
-  //     id: expect.any(Number),
-  //     name: 'Igor',
-  //     email: 'igormail@mail.com',
-  //     password: '12345',
-  //   });
-
-  //   expect(mockUsersService.create).toHaveBeenCalledWith({
-  //     name: 'Igor',
-  //     email: 'igormail@mail.com',
-  //     password: '12345',
-  //   });
-  // });
-
-  // it('Deve atualizar um usuário', () => {
-  //   const dto = {
-  //     name: 'Igor',
-  //     email: 'igormail@mail.com',
-  //     password: '12345',
-  //   };
-
-  //   expect(controller.update('1', dto)).toEqual({
-  //     id: 1,
-  //     ...dto,
-  //   });
-
-  //   expect(mockUsersService.update).toHaveBeenCalled();
-  // });
-
   it('Deve trazer todos os usuários', async () => {
     const result = await controller.findAll();
 
@@ -100,9 +60,23 @@ describe('UsersController', () => {
   });
 
   it('Deve atualizar um usuário', async () => {
-    const result = await controller.update('1', createdUser);
+    const result = await controller.update('1', user);
 
-    expect(result).toEqual(createdUser);
+    expect(result).toEqual(user);
     expect(service.update).toHaveBeenCalled();
+  });
+
+  it('Deve deletar um usuário ao passar um id', async () => {
+    const result = await controller.remove('1');
+
+    expect(result).toEqual('1');
+    expect(service.remove).toHaveBeenCalled();
+  });
+
+  it('Deve criar um usuário ao passar um novo user', async () => {
+    const result = await controller.create(user);
+
+    expect(result).toEqual(user);
+    expect(service.create).toHaveBeenCalled();
   });
 });
