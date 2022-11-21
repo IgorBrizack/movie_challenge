@@ -17,7 +17,6 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     if (!user) {
       throw new UnauthorizedException();
     }
-    //AQUI EU VOU VERIFICAR MEU HEARDERS.AUTHORIZATION
     return user;
   }
 }

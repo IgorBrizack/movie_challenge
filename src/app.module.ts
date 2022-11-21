@@ -10,7 +10,9 @@ import 'dotenv/config';
 
 @Module({
   imports: [
-    CacheModule.register(),
+    CacheModule.register({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot(dataSourceOptions),
     UsersModule,
     MoviesModule,
