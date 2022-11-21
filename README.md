@@ -7,7 +7,7 @@ Desafios propostos:
 - Desenvolver um sistema de autenticação JWT.
 - Desenvolver uma CRUD de um catálogo de filmes. Todos os endpoints dessa CRUD só devem ser consumidos por um usuário autenticado.
 - Desenvolver os testes da aplicação.
-- Fazer o Deploy ao finalizar a criação da API.
+- Fazer o Deploy ao finalizar a criação da API e gerar a sua documentação com o Swagger.
 
 Ferramentas necessárias:
 - TypeScript (Possuia conhecimento prévio)
