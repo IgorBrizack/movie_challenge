@@ -59,4 +59,6 @@ npm run start:dev
  
  Nesse momento o Swagger irá renderizar com as chamadas das rotas e as sua definições.
  
+ Atente-se as rotas que necessitam de um JWT para serem acessadas. O token só será retornado após a criação de um usuário e esse usuário ter feito o login.
+ 
 </details>
