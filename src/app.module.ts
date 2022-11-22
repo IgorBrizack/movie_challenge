@@ -1,4 +1,4 @@
-import { CacheModule, Module } from '@nestjs/common';
+import { CacheInterceptor, CacheModule, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -7,10 +7,13 @@ import { MoviesModule } from './movies/movies.module';
 import { AuthModule } from './auth/auth.module';
 import { dataSourceOptions } from 'db/data-source';
 import 'dotenv/config';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 
 @Module({
   imports: [
     CacheModule.register({
+      ttl: 60,
+      max: 1000,
       isGlobal: true,
     }),
     TypeOrmModule.forRoot(dataSourceOptions),
@@ -19,6 +22,12 @@ import 'dotenv/config';
     AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: CacheInterceptor,
+    },
+    AppService,
+  ],
 })
 export class AppModule {}

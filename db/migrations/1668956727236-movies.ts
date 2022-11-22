@@ -5,7 +5,7 @@ export class movies1668956727236 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `CREATE TABLE "movie" ("id" SERIAL PRIMARY KEY , "moviename" varchar NOT NULL,"theme" varchar NOT NULL, "year" varchar NOT NULL)`,
+      `CREATE TABLE "movie" ("id" SERIAL PRIMARY KEY , "name" varchar NOT NULL,"theme" varchar NOT NULL, "year" varchar NOT NULL)`,
     );
   }
 
