@@ -15,7 +15,7 @@ Ferramentas necessárias:
 - TypeORM (Possuia conhecimentos em ORM ex: Sequelize)
 - Swagger (Não possuia conhecimento prévio)
 - Docker (Possuia conhecimento Prévio)
-- Redis (Não consegui implementar, não possuia conhecimento prévio)
+- Redis (Não possuia conhecimento prévio)
 - PostgreSQL (Possuia conhecimento prévio)
 
 <details>
