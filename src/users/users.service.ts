@@ -30,7 +30,7 @@ export class UsersService {
   }
 
   async getByEmail(email: string) {
-    return this.usersRepository.findOne({
+    return await this.usersRepository.findOne({
       where: {
         email,
       },
@@ -38,10 +38,16 @@ export class UsersService {
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
+    const userById = await this.usersRepository.findOneBy({ id });
+    if (!userById) throw new HttpException('Not found', HttpStatus.NOT_FOUND);
+
     return await this.usersRepository.update(id, updateUserDto);
   }
 
   async remove(id: number) {
+    const userById = await this.usersRepository.findOneBy({ id });
+    if (!userById) throw new HttpException('Not found', HttpStatus.NOT_FOUND);
+
     return await this.usersRepository.delete(id);
   }
 }

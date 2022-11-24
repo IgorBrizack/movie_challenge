@@ -26,15 +26,24 @@ export class MoviesService {
     return this.movieRepository.find();
   }
 
-  findOne(id: number) {
-    return this.movieRepository.findOneBy({ id });
+  async findOne(id: number) {
+    const movieById = await this.movieRepository.findOneBy({ id });
+    if (!movieById) throw new HttpException('Not found', HttpStatus.NOT_FOUND);
+
+    return movieById;
   }
 
   async update(id: number, updateMovieDto: UpdateMovieDto) {
+    const movieById = await this.movieRepository.findOneBy({ id });
+    if (!movieById) throw new HttpException('Not found', HttpStatus.NOT_FOUND);
+
     return await this.movieRepository.update(id, updateMovieDto);
   }
 
   async remove(id: number) {
+    const movieById = await this.movieRepository.findOneBy({ id });
+    if (!movieById) throw new HttpException('Not found', HttpStatus.NOT_FOUND);
+
     return await this.movieRepository.delete(id);
   }
 }
