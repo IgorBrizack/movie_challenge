@@ -22,7 +22,7 @@ export class MoviesController {
 
   @UseGuards(JwtAuthGuard)
   @Post()
-  create(@Body() createMovieDto: CreateMovieDto) {
+  async create(@Body() createMovieDto: CreateMovieDto) {
     return this.moviesService.create(createMovieDto);
   }
 

@@ -20,9 +20,9 @@ const allMovies: Movie[] = [
 ];
 
 const movie: Movie = new Movie({
-  id: 1,
-  name: 'Os suspeitos',
-  theme: 'Suspense',
+  id: 3,
+  name: 'Sherlock Holmes',
+  theme: 'Investigação',
   year: new Date(),
 });
 

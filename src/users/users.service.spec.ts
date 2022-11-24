@@ -22,8 +22,8 @@ const allUser: User[] = [
 
 const user: User = new User({
   id: 1,
-  name: 'igor',
-  email: 'igor@mail.com',
+  name: 'João',
+  email: 'joao@mail.com',
   password: '1234565',
 });
 
