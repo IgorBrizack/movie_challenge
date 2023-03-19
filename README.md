@@ -34,14 +34,13 @@ Ferramentas necessárias:
 git clone git@github.com:IgorBrizack/movie_challenge.git
 acesse o diretório...
 
-instale as dependências...
-npm install
-
 subindo os containers...
 docker-compose up -d
 
-inicie a aplicação...
-npm run start:dev
+inicie a aplicação acessando localhost:3001/api
+
+Atente-se que as portas das quais o container utilizam devem estar liberada.
+
 ```
  
  </details>
