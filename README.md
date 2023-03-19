@@ -40,7 +40,7 @@ docker-compose up -d
 inicie a aplicação acessando localhost:3001/api
 
 Atente-se que as portas das quais o container utilizam devem estar liberadas,
-a inicialização dos backend pode levar alguns segundos até que esteja disponível.
+a inicialização do backend pode levar alguns segundos até que esteja disponível.
 
 ```
  
